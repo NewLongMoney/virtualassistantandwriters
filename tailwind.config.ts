@@ -25,16 +25,16 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1e40af", // Blue
+          DEFAULT: "#1a5d3a", // Dark green
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#ca8a04", // Yellow
-          foreground: "#ffffff",
+          DEFAULT: "#fbbf24", // Yellow
+          foreground: "#000000",
         },
         accent: {
           DEFAULT: "#f3f4f6", // Light grey
-          foreground: "#1e40af",
+          foreground: "#1a5d3a",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
