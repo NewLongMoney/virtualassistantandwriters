@@ -10,13 +10,16 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 226 71% 40%; /* Blue: #1e40af */
+    --primary: 226 71% 40%;
+    /* Blue: #1e40af */
     --primary-foreground: 0 0% 100%;
-    --secondary: 42 93% 40%; /* Yellow: #ca8a04 */
+    --secondary: 42 93% 40%;
+    /* Yellow: #ca8a04 */
     --secondary-foreground: 0 0% 100%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 20% 96%; /* Light grey: #f3f4f6 */
+    --accent: 210 20% 96%;
+    /* Light grey: #f3f4f6 */
     --accent-foreground: 154 70% 22%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -31,7 +34,52 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-accent text-foreground;
+    @apply bg-[#0f172a] text-foreground overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/10 transition-all duration-300;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  .blob {
+    @apply absolute rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
   }
 }

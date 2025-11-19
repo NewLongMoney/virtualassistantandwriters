@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -25,16 +25,16 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1a5d3a", // Dark green
+          DEFAULT: "#1e40af", // Blue
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#fbbf24", // Yellow
-          foreground: "#000000",
+          DEFAULT: "#ca8a04", // Yellow
+          foreground: "#ffffff",
         },
         accent: {
           DEFAULT: "#f3f4f6", // Light grey
-          foreground: "#1a5d3a",
+          foreground: "#1e40af",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -63,10 +63,25 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blob: "blob 7s infinite",
       },
     },
   },
