@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Phone, Mail, ArrowRight, CheckCircle2 } from "lucide-react";
+import InstagramEmbed from "@/components/InstagramEmbed";
 
 const services = [
   {
@@ -257,6 +258,34 @@ export default function Home() {
               >
                 <Button variant="secondary" size="lg" className="bg-secondary hover:bg-secondary/90 text-black font-bold border-0 shadow-lg px-8 py-6 rounded-lg text-lg">
                   Visit Instagram
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Section */}
+      <section className="py-20 relative bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Follow Us on Instagram</h2>
+            <p className="text-xl mb-12 text-gray-700">
+              Stay connected and see our latest updates, tips, and behind-the-scenes content.
+            </p>
+            <div className="flex justify-center mb-8">
+              <InstagramEmbed />
+            </div>
+            <div className="flex justify-center mt-8">
+              <a
+                href="https://www.instagram.com/virtualassistandwriters.co?utm_source=qr&igsh=d3czbHJmZGg2Mm1w"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center group"
+              >
+                <Button variant="secondary" size="lg" className="bg-secondary hover:bg-secondary/90 text-black font-bold border-0 shadow-lg px-8 py-6 rounded-lg text-lg">
+                  Visit Our Instagram
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
