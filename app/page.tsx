@@ -325,6 +325,17 @@ export default function Home() {
           <div className="mt-12 text-center text-white/80 text-sm">
             <p>&copy; {new Date().getFullYear()} Virtual Assistant & Writers Co. All rights reserved.</p>
             <p className="mt-2">Simplifying complex tasks, enabling consistent growth.</p>
+            <p className="mt-4 text-white/60">
+              Made by{" "}
+              <a
+                href="https://captivart.art"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary hover:text-yellow-300 transition-colors underline"
+              >
+                captivart.art
+              </a>
+            </p>
           </div>
         </div>
         {/* Yellow strip at bottom - matching original flyer */}
