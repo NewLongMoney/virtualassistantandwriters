@@ -10,22 +10,22 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 154 70% 22%;
-    /* Dark green: #1a5d3a */
+    --primary: 153 64% 17%;
+    /* Deep Green: #10492f */
     --primary-foreground: 0 0% 100%;
-    --secondary: 48 96% 53%;
-    /* Yellow: #fbbf24 */
+    --secondary: 47 100% 50%;
+    /* Vibrant Gold: #ffc800 */
     --secondary-foreground: 0 0% 0%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 20% 96%;
     /* Light grey: #f3f4f6 */
-    --accent-foreground: 154 70% 22%;
+    --accent-foreground: 153 64% 17%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 154 70% 22%;
+    --ring: 153 64% 17%;
     --radius: 0.5rem;
   }
 }
@@ -54,7 +54,7 @@
   }
 
   .blob {
-    @apply absolute rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+    @apply absolute rounded-full mix-blend-screen filter blur-xl opacity-70 animate-blob;
   }
 
   .animation-delay-2000 {

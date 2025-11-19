@@ -25,16 +25,16 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1a5d3a", // Dark green
+          DEFAULT: "#10492f", // Deep Green from flyer
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#fbbf24", // Yellow
+          DEFAULT: "#ffc800", // Vibrant Gold from flyer
           foreground: "#000000",
         },
         accent: {
           DEFAULT: "#f3f4f6", // Light grey
-          foreground: "#1a5d3a",
+          foreground: "#10492f",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
