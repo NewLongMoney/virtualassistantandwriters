@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -89,7 +90,16 @@ export default function Home() {
         <div className="bg-primary mx-4 mt-4 rounded-2xl shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
+                <div className="relative h-10 w-10 md:h-12 md:w-12">
+                  <Image
+                    src="/images/logo.png"
+                    alt="VirtualAssistandWriters.Co Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
                 <div className="bg-primary px-4 py-2 rounded-lg">
                   <span className="text-white font-bold text-sm tracking-wide">VirtualAssistandWriters.Co</span>
                 </div>
@@ -259,7 +269,15 @@ export default function Home() {
       <footer className="bg-primary text-white py-12 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
+            <div className="mb-6 md:mb-0 flex items-center space-x-3">
+              <div className="relative h-8 w-8 md:h-10 md:w-10">
+                <Image
+                  src="/images/logo.png"
+                  alt="VirtualAssistandWriters.Co Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <div className="inline-block px-6 py-3">
                 <span className="text-white font-bold tracking-wide">VirtualAssistandWriters.Co</span>
               </div>
