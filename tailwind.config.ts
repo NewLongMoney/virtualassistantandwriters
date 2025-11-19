@@ -24,12 +24,23 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Original flyer colors
+        green: {
+          DEFAULT: "#10492f", // Deep Green from original flyer
+          light: "#16a34a",
+          dark: "#0d3d1f",
+        },
+        yellow: {
+          DEFAULT: "#ffc800", // Vibrant Yellow from original flyer
+          light: "#ffd84d",
+          dark: "#cc9f00",
+        },
         primary: {
-          DEFAULT: "#10492f", // Deep Green from flyer
+          DEFAULT: "#10492f", // Deep Green from original flyer
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#ffc800", // Vibrant Gold from flyer
+          DEFAULT: "#ffc800", // Vibrant Yellow from original flyer
           foreground: "#000000",
         },
         accent: {

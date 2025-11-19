@@ -81,26 +81,22 @@ const services = [
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Liquid Background */}
-      <div className="fixed inset-0 w-full h-full overflow-hidden -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-secondary/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-primary/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
-      </div>
+      {/* Background - White from original flyer */}
+      <div className="fixed inset-0 w-full h-full overflow-hidden -z-10 bg-white"></div>
 
       {/* Header */}
       <header className="fixed top-0 w-full z-50 transition-all duration-300">
-        <div className="glass mx-4 mt-4 rounded-2xl">
+        <div className="bg-primary mx-4 mt-4 rounded-2xl shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <div className="bg-secondary/90 px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm">
-                  <span className="text-white font-bold text-sm tracking-wide">Virtual Assistant & Writers Co.</span>
+                <div className="bg-primary px-4 py-2 rounded-lg">
+                  <span className="text-white font-bold text-sm tracking-wide">VirtualAssistandWriters.Co</span>
                 </div>
               </div>
               <nav className="hidden md:flex space-x-8">
-                <a href="#services" className="text-white/90 hover:text-secondary transition-colors font-medium text-glow">Services</a>
-                <a href="#contact" className="text-white/90 hover:text-secondary transition-colors font-medium text-glow">Contact</a>
+                <a href="#services" className="text-white hover:text-secondary transition-colors font-medium">Services</a>
+                <a href="#contact" className="text-white hover:text-secondary transition-colors font-medium">Contact</a>
               </nav>
             </div>
           </div>
@@ -111,52 +107,57 @@ export default function Home() {
       <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 px-4">
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block glass px-6 py-2 rounded-full mb-8 border border-white/20">
-              <span className="text-secondary font-semibold tracking-wider uppercase text-sm">Elevate Your Business</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white drop-shadow-lg">
-              PROFESSIONAL VIRTUAL
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-200">ASSISTANT SUPPORT</span>
-              <br />
-              FOR BUSY FOUNDERS
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight text-primary">
+              LEAD GENERATION & CLIENT OUTREACH
             </h1>
-            <p className="text-xl md:text-2xl mb-10 text-blue-100/90 leading-relaxed max-w-3xl mx-auto font-light">
-              We are problem solvers, strategists, and support partners dedicated to
-              helping businesses save time, stay organised, and achieve consistent growth.
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-2">VIRTUAL ASSISTANT</h2>
+              <div className="h-1 bg-primary w-32 mx-auto"></div>
+            </div>
+            <p className="text-lg md:text-xl mb-10 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              I help businesses find the right clients through research, personalized outreach, and consistent follow up. You get organized communication, qualified leads, and a steady flow of potential clients.
             </p>
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-lg px-10 py-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/20">
-              Get Started <ArrowRight className="ml-2 h-6 w-6" />
+            <div className="flex items-center justify-center mb-8">
+              <CheckCircle2 className="h-6 w-6 text-primary mr-2" />
+              <p className="text-lg text-gray-700">
+                If you need help with client outreach or lead follow up, I am here to support your business
+              </p>
+            </div>
+            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-black font-bold text-lg px-10 py-6 rounded-lg shadow-lg transition-all duration-300">
+              CONTACT US: <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 relative">
+      <section id="services" className="py-20 relative bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-glow">Our Services</h2>
-            <p className="text-xl text-blue-100/80 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Services</h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               Comprehensive virtual assistant solutions tailored to your business needs
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service) => (
-              <Card key={service.id} className="glass-card border-0 text-white group">
+              <Card key={service.id} className="bg-white border-2 border-gray-200 text-gray-800 group hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-secondary text-xl group-hover:text-yellow-300 transition-colors">{service.title}</CardTitle>
+                  <CardTitle className="text-primary text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-sm text-blue-200 mb-2 uppercase tracking-wider">Problem</h4>
-                      <p className="text-sm text-white/70 line-clamp-3 group-hover:text-white/90 transition-colors">{service.problem}</p>
+                      <h4 className="font-semibold text-sm text-gray-600 mb-2 uppercase tracking-wider">Problem</h4>
+                      <p className="text-sm text-gray-700 line-clamp-3">{service.problem}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-sm text-green-300 mb-2 uppercase tracking-wider">Solution</h4>
-                      <p className="text-sm text-white/70 line-clamp-3 group-hover:text-white/90 transition-colors">{service.solution}</p>
+                      <h4 className="font-semibold text-sm text-primary mb-2 uppercase tracking-wider flex items-center">
+                        <CheckCircle2 className="h-4 w-4 mr-2" />
+                        Solution
+                      </h4>
+                      <p className="text-sm text-gray-700 line-clamp-3">{service.solution}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -166,28 +167,28 @@ export default function Home() {
 
           {/* Detailed Services Accordion */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-8 text-center text-glow">
+            <h3 className="text-3xl font-bold text-primary mb-8 text-center">
               Learn More About Each Service
             </h3>
             <Accordion type="single" collapsible className="w-full space-y-4">
               {services.map((service) => (
-                <AccordionItem key={service.id} value={service.id} className="glass border-0 rounded-xl px-6 overflow-hidden">
-                  <AccordionTrigger className="text-left font-semibold text-white hover:text-secondary transition-colors py-6">
+                <AccordionItem key={service.id} value={service.id} className="bg-white border-2 border-gray-200 rounded-xl px-6 overflow-hidden">
+                  <AccordionTrigger className="text-left font-semibold text-primary hover:text-primary/80 transition-colors py-6">
                     {service.title}
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-6 pb-6">
-                      <div className="p-6 bg-red-500/10 border border-red-500/20 rounded-xl backdrop-blur-sm">
-                        <h4 className="font-semibold text-red-300 mb-2 flex items-center">
+                      <div className="p-6 bg-red-50 border border-red-200 rounded-xl">
+                        <h4 className="font-semibold text-red-700 mb-2 flex items-center">
                           <span className="mr-2">⚠️</span> Problem:
                         </h4>
-                        <p className="text-sm text-white/80">{service.problem}</p>
+                        <p className="text-sm text-gray-700">{service.problem}</p>
                       </div>
-                      <div className="p-6 bg-green-500/10 border border-green-500/20 rounded-xl backdrop-blur-sm">
-                        <h4 className="font-semibold text-green-300 mb-2 flex items-center">
+                      <div className="p-6 bg-green-50 border border-primary/20 rounded-xl">
+                        <h4 className="font-semibold text-primary mb-2 flex items-center">
                           <CheckCircle2 className="mr-2 h-4 w-4" /> Solution:
                         </h4>
-                        <p className="text-sm text-white/80">{service.solution}</p>
+                        <p className="text-sm text-gray-700">{service.solution}</p>
                       </div>
                     </div>
                   </AccordionContent>
@@ -199,38 +200,38 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 relative">
+      <section id="contact" className="py-20 relative bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center glass p-12 rounded-3xl border border-white/10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-glow">Get In Touch</h2>
-            <p className="text-xl mb-12 text-blue-100/90">
+          <div className="max-w-4xl mx-auto text-center bg-white p-12 rounded-3xl border-2 border-gray-200 shadow-lg">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary">Get In Touch</h2>
+            <p className="text-xl mb-12 text-gray-700">
               Ready to simplify your workload and focus on growth? Let&apos;s discuss how we can help.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+              <Card className="bg-white border-2 border-gray-200 hover:border-primary transition-colors">
                 <CardContent className="pt-8">
                   <div className="flex items-center justify-center mb-6">
-                    <div className="bg-secondary p-4 rounded-full shadow-lg shadow-secondary/20">
-                      <Phone className="h-8 w-8 text-white" />
+                    <div className="bg-secondary p-4 rounded-full shadow-lg">
+                      <Phone className="h-8 w-8 text-black" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
-                  <a href="tel:+254720858303" className="text-blue-200 hover:text-white transition-colors text-lg">
+                  <h3 className="text-xl font-semibold mb-2 text-primary">Phone</h3>
+                  <a href="tel:+254720858303" className="text-gray-700 hover:text-primary transition-colors text-lg">
                     +254 720 858 303
                   </a>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+              <Card className="bg-white border-2 border-gray-200 hover:border-primary transition-colors">
                 <CardContent className="pt-8">
                   <div className="flex items-center justify-center mb-6">
-                    <div className="bg-secondary p-4 rounded-full shadow-lg shadow-secondary/20">
-                      <Mail className="h-8 w-8 text-white" />
+                    <div className="bg-secondary p-4 rounded-full shadow-lg">
+                      <Mail className="h-8 w-8 text-black" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
-                  <a href="mailto:teddycleg@gmail.com" className="text-blue-200 hover:text-white transition-colors text-lg break-all">
+                  <h3 className="text-xl font-semibold mb-2 text-primary">Email</h3>
+                  <a href="mailto:teddycleg@gmail.com" className="text-gray-700 hover:text-primary transition-colors text-lg break-all">
                     teddycleg@gmail.com
                   </a>
                 </CardContent>
@@ -244,7 +245,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center group"
               >
-                <Button variant="secondary" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 shadow-lg hover:shadow-purple-500/25 px-8 py-6 rounded-full text-lg">
+                <Button variant="secondary" size="lg" className="bg-secondary hover:bg-secondary/90 text-black font-bold border-0 shadow-lg px-8 py-6 rounded-lg text-lg">
                   Visit Instagram
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -255,30 +256,32 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/20 backdrop-blur-lg text-white py-12 border-t border-white/5">
+      <footer className="bg-primary text-white py-12 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <div className="inline-block bg-white/5 px-6 py-3 rounded-xl border border-white/10">
-                <span className="text-white font-bold tracking-wide">Virtual Assistant & Writers Co.</span>
+              <div className="inline-block px-6 py-3">
+                <span className="text-white font-bold tracking-wide">VirtualAssistandWriters.Co</span>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-              <a href="tel:+254720858303" className="flex items-center text-blue-200 hover:text-white transition-colors">
+              <a href="tel:+254720858303" className="flex items-center text-white hover:text-secondary transition-colors">
                 <Phone className="h-4 w-4 mr-2" />
-                +254 720 858 303
+                +254720858303
               </a>
-              <a href="mailto:teddycleg@gmail.com" className="flex items-center text-blue-200 hover:text-white transition-colors">
+              <a href="mailto:teddycleg@gmail.com" className="flex items-center text-white hover:text-secondary transition-colors">
                 <Mail className="h-4 w-4 mr-2" />
                 teddycleg@gmail.com
               </a>
             </div>
           </div>
-          <div className="mt-12 text-center text-white/40 text-sm">
+          <div className="mt-12 text-center text-white/80 text-sm">
             <p>&copy; {new Date().getFullYear()} Virtual Assistant & Writers Co. All rights reserved.</p>
             <p className="mt-2">Simplifying complex tasks, enabling consistent growth.</p>
           </div>
         </div>
+        {/* Yellow strip at bottom - matching original flyer */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-secondary"></div>
       </footer>
     </div>
   );

@@ -4,20 +4,22 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%;
+    /* White background from flyer */
+    --foreground: 0 0% 20%;
+    /* Dark gray text from flyer */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 20%;
     --primary: 153 64% 17%;
-    /* Deep Green: #10492f */
+    /* Deep Green from original flyer: #10492f */
     --primary-foreground: 0 0% 100%;
     --secondary: 47 100% 50%;
-    /* Vibrant Gold: #ffc800 */
+    /* Vibrant Yellow from original flyer: #ffc800 */
     --secondary-foreground: 0 0% 0%;
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 0 0% 40%;
     --accent: 210 20% 96%;
     /* Light grey: #f3f4f6 */
     --accent-foreground: 153 64% 17%;
@@ -26,6 +28,7 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 153 64% 17%;
+    /* Deep Green ring color from original flyer */
     --radius: 0.5rem;
   }
 }
@@ -36,7 +39,7 @@
   }
 
   body {
-    @apply bg-[#0f172a] text-foreground overflow-x-hidden;
+    @apply bg-white text-foreground overflow-x-hidden;
   }
 }
 
