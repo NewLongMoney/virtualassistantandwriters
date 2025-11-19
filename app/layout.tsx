@@ -7,6 +7,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "VirtualAssistandWriters.Co - Professional Virtual Assistant Services",
   description: "Trusted virtual assistant support for busy founders, entrepreneurs, and professionals. We simplify administrative, creative, and operational tasks.",
+  openGraph: {
+    title: "VirtualAssistandWriters.Co - Professional Virtual Assistant Services",
+    description: "Trusted virtual assistant support for busy founders, entrepreneurs, and professionals. We simplify administrative, creative, and operational tasks.",
+    url: "https://virtualassistantandwriters.vercel.app/",
+    siteName: "VirtualAssistandWriters.Co",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

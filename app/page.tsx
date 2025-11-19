@@ -111,11 +111,11 @@ export default function Home() {
               <span className="text-black font-semibold">VirtualAssistandWriters.Co</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              TRUSTED BOOKKEEPING
+              PROFESSIONAL VIRTUAL
               <br />
-              <span className="text-secondary">SUPPORT FOR BUSY</span>
+              <span className="text-secondary">ASSISTANT SUPPORT FOR</span>
               <br />
-              FOUNDERS
+              BUSY FOUNDERS
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
               At VirtualAssistandWriters.Co, we are more than just virtual assistants.

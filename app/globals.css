@@ -10,10 +10,10 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 154 70% 22%; /* Dark green: #1a5d3a */
+    --primary: 226 71% 40%; /* Blue: #1e40af */
     --primary-foreground: 0 0% 100%;
-    --secondary: 48 96% 53%; /* Yellow: #fbbf24 */
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 42 93% 40%; /* Yellow: #ca8a04 */
+    --secondary-foreground: 0 0% 100%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 20% 96%; /* Light grey: #f3f4f6 */
