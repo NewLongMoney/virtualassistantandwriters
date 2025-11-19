@@ -94,7 +94,7 @@ export default function Home() {
               <div className="flex items-center space-x-3">
                 <div className="relative h-10 w-10 md:h-12 md:w-12">
                   <Image
-                    src="/images/logo.png"
+                    src="/images/logo.jpg"
                     alt="VirtualAssistandWriters.Co Logo"
                     fill
                     className="object-contain"
@@ -301,7 +301,7 @@ export default function Home() {
             <div className="mb-6 md:mb-0 flex items-center space-x-3">
               <div className="relative h-8 w-8 md:h-10 md:w-10">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.jpg"
                   alt="VirtualAssistandWriters.Co Logo"
                   fill
                   className="object-contain"
