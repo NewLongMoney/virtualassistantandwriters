@@ -206,7 +206,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Get In Touch</h2>
             <p className="text-xl mb-12 text-white/90">
-              Ready to simplify your workload and focus on growth? Let's discuss how we can help.
+              Ready to simplify your workload and focus on growth? Let&apos;s discuss how we can help.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
